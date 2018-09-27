@@ -27,7 +27,7 @@ export const firebaseCred = {
   authDomain: "primevideo-c14a3.firebaseapp.com",
   databaseURL: "https://primevideo-c14a3.firebaseio.com",
   projectId: "primevideo-c14a3",
-  storageBucket: "",
+  storageBucket: "primevideo-c14a3.appspot.com",
   messagingSenderId: "31035557511"
 };
 firebase.initializeApp(firebaseCred);

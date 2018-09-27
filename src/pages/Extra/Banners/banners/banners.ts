@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ToastController, ModalController, AlertController } from 'ionic-angular';
 import * as firebase from 'firebase';
+import { AddBannersPage } from '../add-banners/add-banners';
 
 
 
@@ -49,7 +50,7 @@ export class BannersPage {
   }
 
   gtAddBanner(){
-    this.navCtrl.push("AddBannersPage");
+    this.navCtrl.push(AddBannersPage);
   }
 
 

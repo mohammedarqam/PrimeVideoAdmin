@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import moment from 'moment';
 import * as firebase from 'firebase';
+import { BannersPage } from '../banners/banners';
 
 
 @IonicPage()
@@ -41,7 +42,7 @@ imageRef = firebase.storage().ref("Extra Data/Banners/" + this.order);
           Image : this.url,
           PostTime : moment().format("DD/MMM-HH:mm")
         }).then(()=>{
-          this.navCtrl.setRoot("BannersPage");
+          this.navCtrl.setRoot(BannersPage);
         }).then(()=>{
           this.presentToast();
           loading.dismiss();
