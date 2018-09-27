@@ -5,6 +5,9 @@ import * as firebase from 'firebase';
 import { LoginPage } from '../pages/Extra/login/login';
 import { UsersPage } from '../pages/Users/users/users';
 import { DashboardPage } from '../pages/Extra/dashboard/dashboard';
+import { ViewGenresPage } from '../pages/Templates/Genres/view-genres/view-genres';
+import { ViewLanguagesPage } from '../pages/Templates/Langs/view-languages/view-languages';
+import { BannersPage } from '../pages/Extra/Banners/banners/banners';
 @Component({
   templateUrl: 'app.html'
 })
@@ -27,6 +30,9 @@ export class MyApp {
     this.pages = [
       { title: 'DashBoard', component: DashboardPage, icon: "flash",color: "yellowi" },
       { title: 'Users', component: UsersPage, icon: "ios-people",color: "whiter" },
+      { title: 'Genres', component: ViewGenresPage, icon: "ios-people",color: "whiter" },
+      { title: 'Languages', component: ViewLanguagesPage, icon: "ios-people",color: "whiter" },
+      { title: 'Banners', component: BannersPage, icon: "ios-people",color: "whiter" },
 
 
     ];

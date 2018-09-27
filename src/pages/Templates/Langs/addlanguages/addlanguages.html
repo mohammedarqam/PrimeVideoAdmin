@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary" >
+    <ion-title>Add a Language</ion-title>
+    <ion-buttons end>
+      <button ion-button clear icon-only (click)="close()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item class="content" >
+    <ion-label  floating>Language Title</ion-label>
+    <ion-input type="text" [(ngModel)]="name" (keyup.enter)="checkData()" autofocus ></ion-input>
+  </ion-item>
+
+
+  <div>
+    <button ion-button class="right" round (click)="checkData()">Add</button>
+  </div>
+
+</ion-content>
