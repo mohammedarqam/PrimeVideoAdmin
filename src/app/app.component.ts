@@ -8,13 +8,15 @@ import { DashboardPage } from '../pages/Extra/dashboard/dashboard';
 import { ViewGenresPage } from '../pages/Templates/Genres/view-genres/view-genres';
 import { ViewLanguagesPage } from '../pages/Templates/Langs/view-languages/view-languages';
 import { BannersPage } from '../pages/Extra/Banners/banners/banners';
+import { ViewMoviePage } from '../pages/Movies/view-movie/view-movie';
+import { AddMoviePage } from '../pages/Movies/add-movie/add-movie';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = LoginPage;
+  rootPage: any = AddMoviePage;
   activePage: any;
 
   full : boolean = true;
@@ -29,10 +31,11 @@ export class MyApp {
 
     this.pages = [
       { title: 'DashBoard', component: DashboardPage, icon: "flash",color: "yellowi" },
-      { title: 'Users', component: UsersPage, icon: "ios-people",color: "whiter" },
+      { title: 'Movies', component: ViewMoviePage, icon: "ios-people",color: "whiter" },
       { title: 'Genres', component: ViewGenresPage, icon: "ios-people",color: "whiter" },
       { title: 'Languages', component: ViewLanguagesPage, icon: "ios-people",color: "whiter" },
       { title: 'Banners', component: BannersPage, icon: "ios-people",color: "whiter" },
+      { title: 'Users', component: UsersPage, icon: "ios-people",color: "whiter" },
 
 
     ];
@@ -47,7 +50,7 @@ export class MyApp {
         firebase.database().ref("Admin Data").child("Admins").child(user.uid).once('value',itemSnap=>{
             if(itemSnap.exists()){
               var welMsg = "Welcome"+" "+itemSnap.val().Name;
-              this.rootPage = DashboardPage;
+              this.rootPage = AddMoviePage;
               this.presentToast(welMsg);
             }else{
               firebase.auth().signOut().then(()=>{

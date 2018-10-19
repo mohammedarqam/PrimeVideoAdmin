@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AddMoviePage } from '../add-movie/add-movie';
 
-/**
- * Generated class for the ViewMoviePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +10,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'view-movie.html',
 })
 export class ViewMoviePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+  public navCtrl: NavController, 
+  public db : AngularFireDatabase,
+  public navParams: NavParams
+  ) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ViewMoviePage');
-  }
 
+
+
+
+
+
+  addMov(){
+    this.navCtrl.push(AddMoviePage);
+  }
 }

@@ -1,3 +1,21 @@
 page-add-movie {
-
+.mainCard{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    width: 75%;
+}
+.bannerImgL{
+    width: 300px;
+    height: 400px;
+}
+.bannerImgS{
+    width: 150px;
+    height: 200px;
+}
+ion-input{border-bottom: solid 1px map-get($colors,primary )}
+ion-textarea{border-bottom: solid 1px map-get($colors,primary )}
+ion-select{border-bottom: solid 1px map-get($colors,primary )}
+ion-datetime{border-bottom: solid 1px map-get($colors,primary )}
 }

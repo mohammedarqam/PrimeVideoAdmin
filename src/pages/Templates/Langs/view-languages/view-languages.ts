@@ -11,7 +11,7 @@ import { AddlanguagesPage } from '../addlanguages/addlanguages';
 })
 export class ViewLanguagesPage {
 
-  genreRef =this.db.list('Extra Data/Templates/Languages');
+  langRef =this.db.list('Extra Data/Templates/Languages');
   languages: Array<any> = [];
   languagesLoaded: Array<any> = [];
 
@@ -31,7 +31,7 @@ export class ViewLanguagesPage {
   }
 
   getCats(){
-    this.genreRef.snapshotChanges().subscribe(snap=>{
+    this.langRef.snapshotChanges().subscribe(snap=>{
       let tempArray = [];
       snap.forEach(snp=>{
         let temp : any = snp.payload.val();
